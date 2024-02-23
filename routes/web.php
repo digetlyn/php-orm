@@ -81,3 +81,5 @@ Route::get('/edit-post/{id}',[PostController::class,'editPost'])->name('post.edi
 Route::post('/update-post',[PostController::class,'updatePost'])->name('post.update');  //수정처리 하는 부분
 
 Route::get('/delete-post/{id}',[PostController::class,'deletePost'])->name('post.delete');  // 삭제처리하는 부분
+
+Route::get('/inner-join',[PostController::class,'innerJoinClause'])->name('post.innerjoin'); //join처리하는 부분

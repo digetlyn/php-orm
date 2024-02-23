@@ -66,6 +66,16 @@ class PostController extends Controller
    }
    
 
+   // join 하는 부분
+   public function innerJoinClause()
+   {
+         $request = DB::table('users')
+         ->select('users.name','posts.subject','posts.content','users.email')
+         ->join('posts','users.id','=','posts.user_id')
+         ->get();        
+
+         print_r($request);
+   }
 
 
 
