@@ -55,6 +55,15 @@ class PostController extends Controller
       );
       return back()-> with('post_updated','글 수정이 완료됐습니다.');
    }
+
+
+   //삭제처리
+
+   public function deletePost($id)
+   {
+      DB::table('posts')->where('id',$id)->delete();
+         return back()->with('post_deleted','글이 삭제되었습니다.');
+   }
    
 
 

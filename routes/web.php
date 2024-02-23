@@ -69,7 +69,7 @@ Route::get('/session/delete',[SessionController::class,'deleteSessionData'])->na
 
 Route::get('/posts',[PostController::class,'getAllPost'])->name('post.getallpost');  //게시판 목록
 
-Route::get('/add-post',[PostController::class,'addPost'])->name('post.add');  //동록 폼
+Route::get('/add-post',[PostController::class,'addPost'])->name('post.add');  //동록 폼 글쓰기
 Route::post('/add-submit',[PostController::class,'addPostSubmit'])->name('post.addsubmit');   //등록 처리
 
 
@@ -79,3 +79,5 @@ Route::get('/edit-post/{id}',[PostController::class,'editPost'])->name('post.edi
 
 
 Route::post('/update-post',[PostController::class,'updatePost'])->name('post.update');  //수정처리 하는 부분
+
+Route::get('/delete-post/{id}',[PostController::class,'deletePost'])->name('post.delete');  // 삭제처리하는 부분

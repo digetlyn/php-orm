@@ -29,6 +29,8 @@
 
             <div class="mt-2">
                 <button class="btn btn-primary">글등록</button>
+                <a href="{{route('post.getallpost')}}" class="btn btn-secondary">글목록으로 이동</a>
+
             </div>
         </form>
     </div>   
