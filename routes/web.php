@@ -83,3 +83,5 @@ Route::post('/update-post',[PostController::class,'updatePost'])->name('post.upd
 Route::get('/delete-post/{id}',[PostController::class,'deletePost'])->name('post.delete');  // 삭제처리하는 부분
 
 Route::get('/inner-join',[PostController::class,'innerJoinClause'])->name('post.innerjoin'); //join처리하는 부분
+
+Route::get('/all-posts',[PostController::class,'gotAllPostUsingModel']);

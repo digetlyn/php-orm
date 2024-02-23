@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -75,6 +76,13 @@ class PostController extends Controller
          ->get();        
 
          return view('join-view',compact('posts'));
+   }
+
+   public function gotAllPostUsingModel()
+   {
+         $posts = Post::all();
+
+         return view('all-view',compact('posts'));
    }
 
 
