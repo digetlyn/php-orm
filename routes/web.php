@@ -85,3 +85,18 @@ Route::get('/delete-post/{id}',[PostController::class,'deletePost'])->name('post
 Route::get('/inner-join',[PostController::class,'innerJoinClause'])->name('post.innerjoin'); //join처리하는 부분
 
 Route::get('/all-posts',[PostController::class,'gotAllPostUsingModel']);
+
+
+/*
+2. Route 정의
+
+/  -> name : list                                       -> 등록된 차량 리스트 페이지
+
+/create -> name : create                         -> 차량 등록 페이지
+
+/show/{id} -> name : show                     -> 차량별 예약 정보 확인 페이지
+
+/reservation -> name : reservation         -> 차량 예약 페이지
+
+이 네 페이지를 route name으로 왔다갔다할 수 있게 정의
+*/
